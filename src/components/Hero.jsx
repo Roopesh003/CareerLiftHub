@@ -1,6 +1,8 @@
 import React from 'react'
 
-function Hero({title,subtitle}) {
+function Hero({title='Become a React Developer',
+   subtitle='Find the React job that fits for you'}) {
+  
   return (
     <div>
       {/* <!-- Hero --> */}

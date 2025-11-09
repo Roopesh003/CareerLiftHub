@@ -1,16 +1,20 @@
 import React from 'react'
 import { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+import { toast } from 'react-toastify';
 
-const AddJobPage = () => {
+const AddJobPage = ({ addJobSubmit }) => {
     const [title, setTitle] = useState('');
     const [type, setType] = useState('Full-Time');
     const [location, setLocation] = useState('');
     const [description, setDescription] = useState('');
-    const [salary, setSalary] = useState('');
+    const [salary, setSalary] = useState('Under $50K');
     const [companyName, setCompanyName] = useState('');
     const [companyDescription, setCompanyDescription] = useState('');
     const [contactEmail, setContactEmail] = useState('');
     const [contactPhone, setContactPhone] = useState('');
+
+    const navigate = useNavigate();
 
     const submitForm = (e) => {
         e.preventDefault();
@@ -29,7 +33,9 @@ const AddJobPage = () => {
             },
         };
 
-        console.log(newJob);
+        addJobSubmit(newJob);
+        toast.success('Job Added Successfully');
+        return navigate('/jobs');
     }
 
     return (
@@ -50,6 +56,8 @@ const AddJobPage = () => {
                                 name="type"
                                 className="border rounded w-full py-2 px-3"
                                 required
+                                value={type}
+                                onChange={(e)=>setType(e.target.value)}
                             >
                                 <option value="Full-Time">Full-Time</option>
                                 <option value="Part-Time">Part-Time</option>
@@ -69,6 +77,8 @@ const AddJobPage = () => {
                                 className="border rounded w-full py-2 px-3 mb-2"
                                 placeholder="eg. Beautiful Apartment In Miami"
                                 required
+                                value={title}
+                                onChange={(e)=> setTitle(e.target.value)}
                             />
                         </div>
                         <div className="mb-4">

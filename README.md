@@ -1,16 +1,45 @@
-# React + Vite
+# CareerLiftHub
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+CareerLiftHub is a job portal web application built using React and Vite. It aims to provide users a seamless experience to search and explore job opportunities, track applications, and manage their career growth.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) (or [oxc](https://oxc.rs) when used in [rolldown-vite](https://vite.dev/guide/rolldown)) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- Job listing with search and filter options
+- User authentication and profile management
+- Application tracking dashboard
+- Responsive and fast UI with React and Vite
+- ESLint enforced code quality
 
-## React Compiler
+## How It Works
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- The React frontend communicates with APIs (or backend services if implemented) to fetch job data.
+- Users can browse or search available jobs and view detailed descriptions.
+- Logged-in users can save jobs, apply, and track their applications.
+- The frontend uses Vite for optimized build and fast hot module replacement during development.
 
-## Expanding the ESLint configuration
+## Installation and Usage
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+1. Clone the repository:
+
+2. Navigate to the project directory:
+
+3. Install dependencies:
+
+4. Start the development server:
+
+5. Open [http://localhost:3000](http://localhost:3000) in your browser to view the app.
+
+## Technology Stack
+
+- React for UI development
+- Vite as the build tool and dev server
+- JavaScript, HTML, CSS for frontend coding
+- ESLint for maintaining code quality
+
+## Contribution
+
+Contributions and suggestions are welcome! Please feel free to open issues or submit pull requests.
+
+## License
+
+This project is open source and available under the MIT License.
